@@ -3,12 +3,12 @@
   <div class = "row pay pan7 text-center">
       <%= link_to "New Application", new_registered_application_path, class: 'btn btn-success' %>
   </div>
-  <% @registered_application.each do |app| %>
+  <% @registered_applications.each do |app| %>
     <div class = "row">
-      <h4><%= link_to "\##{app.name}", app %></h4>
+      <h4><%= link_to "#{app.name}", app %></h4>
     </div>
   <% end %>
-  <div class="row">
-    <%= link_to "New Application", new_registered_application_path, class: 'btn btn-info' %>
-  </div>
+
+
+
 
