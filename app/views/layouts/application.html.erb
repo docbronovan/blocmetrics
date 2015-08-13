@@ -16,7 +16,7 @@
       <% end %>
       <div class="pull-right user-info">
         <% if current_user %>
-                Hello <%= link_to (current_user.name || current_user.email), current_user %>!
+                Hello <%= (current_user.name || current_user.email) %>!
             <%= link_to edit_user_registration_path, class: 'btn btn-primary btn-sm' do %>
               <span class="glyphicon glyphicon-user"></span>
             <% end %>
@@ -51,4 +51,9 @@
     <%= yield %>
   </div>
 </body>
+<footer>
+    <div class="row navbar navbar-bottom pan7 text-center">
+      Copyright blocmetrics Inc.
+    </div>
+</footer>
 </html>

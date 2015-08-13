@@ -1,7 +1,7 @@
 <h2>Applications</h2>
 
 <div class = "row myurl">
-  <div><%= @registered_application.name %></div>
+  <div><%= @registered_application.name %>, <%= pluralize(@events.count,"event") %> </div>
   <div><%= @registered_application.url %></div>
 </div>
 

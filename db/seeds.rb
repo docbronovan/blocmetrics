@@ -10,7 +10,7 @@
 require 'faker'
 
 #create users
-3.times do
+2.times do
  user = User.new(
    name:     Faker::Name.name,
    email:    Faker::Internet.email,
@@ -31,7 +31,7 @@ brock.save!
 users = User.all
 
 # Create Topics
-10.times do
+7.times do
  RegisteredApplication.create!(
    name:  Faker::Commerce.product_name,
    url: Faker::Internet.url,
@@ -41,7 +41,7 @@ end
 apps = RegisteredApplication.all
 
 # Create events
-30.times do
+20.times do
  Event.create!(
   name: Faker::Hacker.noun,
   registered_application: apps.sample
