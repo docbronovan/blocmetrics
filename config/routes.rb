@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   devise_for :users
 
   get 'welcome/index'
@@ -8,6 +7,7 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
   resources :registered_applications
   resources :users, only: [:update, :show, :index]
+  resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
