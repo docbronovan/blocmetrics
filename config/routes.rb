@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   resources :users, only: [:update, :show, :index]
   resources :events
 
+  
+  # keeps the API routes separated from the rest of the app routes
+  namespace :api, defaults: { format: :json } do
+    match 'create_event', to: 'events#create', via: [:options]
+    resources :events, only: [:create] #Blocmetrics' API only needs to support one route to record new events.
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
