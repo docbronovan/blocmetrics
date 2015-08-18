@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'chartkick'
+#gem 'groupdate'
+gem 'dateslices'
 gem 'rack-cors'
 gem 'smart_assets'
 gem 'rails', '4.2.1'
