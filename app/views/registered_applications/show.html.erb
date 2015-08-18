@@ -3,7 +3,7 @@
    <div><%= pie_chart @registered_application.events.group(:name).count %></div>
 </div>
 
-<div class = "row col-md-6"><%= line_chart @registered_application.events.group_by_day(:created_at).count %>
+<div class = "row col-md-6"><%= line_chart @registered_application.events.group_by_day(:created_at) %>
 </div>
 
 <div class= "row col-md-12 myurl"><%= @registered_application.url %></div>
