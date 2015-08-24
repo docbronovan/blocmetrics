@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'pg'
 gem 'chartkick'
 gem 'groupdate'
 #gem 'dateslices'
@@ -42,7 +43,6 @@ group :doc do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'binding_of_caller'
   gem 'better_errors'
   #gem 'thin'
@@ -57,6 +57,5 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end

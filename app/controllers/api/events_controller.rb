@@ -12,7 +12,7 @@ class API::EventsController < ApplicationController
       @event.registered_application = @registered_application
       
       if @event.save 
-        render json: @event, status: :created
+        render json: @event, status: :created #JSON-ify the provided data.
       else
         render @event.errors, status: :unprocessable_entity
       end
