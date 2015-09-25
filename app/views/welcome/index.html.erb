@@ -1,13 +1,14 @@
-
 <div class="col-md-8 col-md-offset-2">
   <h2>Blocmetrics</h2>
 </div>
 <div class="row">
-<div class="col-md-12">
-  <div class="jumbotron">
-   <p> Here's a thing
-      </p>
-    <br> 
-  </div>
+  <div class="col-md-12">
+    <div class="jumbotron">
+      <% if current_user %>
+        <h4>Check out the <%= link_to "Registerd Apps", registered_applications_path %></h4>
+      <% else %>
+        <h4> Log in to see the registered apps</h4>
+      <% end %>
+    </div>
 </div>
 </div>
